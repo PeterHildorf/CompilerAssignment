@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><head><title> trafiklys</title>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script"
+async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script></head><body>
+<h1>trafiklys</h1><h2> Inputs </h2>
+Button<h2> Outputs </h2>
+Red<br>Yel<br>Green<br>PRed<br>PGreen<br>
+<h2> Latches </h2>
+Red  &rarr; RedM <br>Yel  &rarr; YelM <br>Req  &rarr; ReqM <br><h2> Update </h2>
+Clr  &larr; \(((RedM)\vee\neg(YelM))\)<br>Req  &larr; \((((ReqM)\wedge(Button))\vee\neg(Clr))\)<br>Red  &larr; \((\neg(RedM)\vee(YelM)\wedge(RedM)\vee\neg(YelM))\)<br>Yel  &larr; \((\neg(RedM)\vee\neg(YelM)\vee(Req)\wedge(RedM)\vee\neg(YelM))\)<br>Green  &larr; \((\neg(Red)\vee\neg(Yel))\)<br>PGreen  &larr; \(((Red)\vee\neg(Yel))\)<br>PRed  &larr; \((\neg(PGreen))\)<br><br><h2>Simulation</h2>Button = 001001111001
